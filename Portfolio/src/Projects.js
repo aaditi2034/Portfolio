@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import PROJECTS from './data/projects';
-import { ClientRequest } from 'http';
 
 class Project extends Component{
     render(){
@@ -18,12 +16,13 @@ class Project extends Component{
 
 class Projects extends Component{
     render(){
+        const DATA = this.props.data;
         return(
             <div>
                 <h2>Highlighted Projects</h2>
                 <div>
                     {
-                        PROJECTS.map(PROJECT => {
+                        DATA.map(PROJECT => {
                             return (
                                 <Project key={PROJECT.id} project={PROJECT}/>
                             );

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import profileImg from './assets/profileImg.jpg';
+import PROJECTS from './data/projects';
+import SOCIAL_PROFILES from './data/socialProfiles';
 
 class App extends Component{
 
@@ -25,7 +27,7 @@ class App extends Component{
                 {
                     this.state.displayBio ? (
                         <div>
-                            <p> Currently I am in training phase.</p>
+                            <p> I belong to Meerut.</p>
                             <p>My hobbies are playing badminton and swimming.</p>
                             <button onClick={this.toggleDisplayBio}>Read Less</button>
                         </div>
@@ -35,9 +37,9 @@ class App extends Component{
                 }
 
                 <hr />
-                <Projects />
+                <Projects data={PROJECTS}/>
                 <hr />
-                <SocialProfiles />
+                <SocialProfiles data={SOCIAL_PROFILES}/>
 
             </div>   
         )
